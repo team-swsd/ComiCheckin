@@ -1,1 +1,3 @@
 comicheckin-db.sqlite3
+vendor
+.env
