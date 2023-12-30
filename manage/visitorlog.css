@@ -1,0 +1,28 @@
+.main-container {
+  width: 90%;
+  overflow: scroll;
+  height: 100%;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+  overflow-wrap: break-word;
+}
