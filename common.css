@@ -1,0 +1,54 @@
+html {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
+
+header {
+  color: #fff;
+  background-color: #221916;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px
+}
+
+header > h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+main {
+  background-color: #E8E6E6;
+  height: calc(100vh - 200px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #B5B5B5;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 480px) {
+	header {
+        height: 50px;
+    }
+
+    footer {
+        height: 50px;
+    }
+
+    main {
+        height: calc(100vh - 100px);
+    }
+}
+

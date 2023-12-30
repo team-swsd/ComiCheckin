@@ -62,7 +62,7 @@ $webhookWorker = $_ENV['WEBHOOKWORKER'];
       </div>
     </main>
     <footer>
-      <button>TOPへ戻る</button>
+      <button onClick="linkTo(`/`)">TOPへ戻る</button>
     </footer>
 
     <script>

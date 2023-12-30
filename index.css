@@ -1,0 +1,38 @@
+.main-container {
+  width: 80%;
+}
+
+.name-input {
+  font-size: 2rem;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 8px;
+  margin: 16px 0;
+}
+
+.cb-area {
+  margin: 8px 0;
+}
+
+.cb-area > input {
+  transform: scale(2);
+  margin: 0 6px 0 6px;
+}
+
+.cb-area > label {
+  font-size: 1.5rem;
+  margin-left: 6px;
+}
+
+.checkin-btn {
+  width: 100%;
+  color: #fff;
+  background-color: #03963D;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 16px 0;
+  padding: 8px 0;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+}
