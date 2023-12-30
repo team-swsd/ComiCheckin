@@ -1,3 +1,11 @@
+<?php
+require '../vendor/autoload.php';
+Dotenv\Dotenv::createImmutable(__DIR__. "/../")->load();
+
+// .envファイルで定義したGREETINGを変数に代入
+$webhookWorker = $_ENV['WEBHOOKWORKER'];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
