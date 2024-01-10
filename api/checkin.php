@@ -1,5 +1,4 @@
 <?php
-
 // 実際のチェックイン処理
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
@@ -24,7 +23,7 @@ $insertJson["date"] = $time->format("Y-m-d H:i:s");
 $insertJson["visitorName"] = $data["visitor"];
 $insertJson["target"] = $data["target"];
 
-require_once(dirname(__FILE__) . '/lib/db.php');
+require_once(dirname(__FILE__) . '/../lib/db.php');
 
 try {
     $stmt = $db->prepare('INSERT INTO visitlog VALUES(NULL, :json)');
@@ -53,15 +52,8 @@ for ($i = 0; $i < count($data["target"]); $i++){
     
 }
 $discordContent["content"] = $data["visitor"] . "さんが " . $targets ." を訪れました! 時刻: ". $insertJson["date"];
-$json = json_encode($discordContent);
 
-$url = "https://discord.com/api/webhooks/1190247646972096586/NbX5wZMSYW9IIkRRFYR7lNDFBtoys0kfyqKRsU3-sMESeV3gWoFJ-FVcJrhUvfUBM9jj";
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_URL, $url);
-$result=curl_exec($ch);
-curl_close($ch);
+require_once(dirname(__FILE__) . '/../lib/discordWebhook.php');
+discordWebhook($discordContent);
+
 ?>
