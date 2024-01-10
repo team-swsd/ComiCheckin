@@ -1,2 +1,9 @@
 RedirectMatch 404 /\..*$
+<Files ~ "^(manifest\.json|site\.webmanifest)$">
+    Require all granted
+</Files>
 
+AuthType Basic
+AuthUserFile "/var/www/htpasswd/swsd"
+AuthName "Please auth"
+Require valid-user
