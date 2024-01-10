@@ -15,3 +15,10 @@ CREATE TABLE IF NOT EXISTS "visitlog" (
     "id"    INTEGER PRIMARY KEY AUTOINCREMENT,
     value json
 )');
+
+$db->exec('
+CREATE TABLE IF NOT EXISTS "purchaselog" (
+    "id"    INTEGER PRIMARY KEY AUTOINCREMENT,
+    "item_name" text,
+    "created_at" TEXT NOT NULL DEFAULT (DATETIME(\'now\', \'localtime\'))
+)');
