@@ -85,7 +85,7 @@
       })
 
       try {
-        const res = await fetch("/checkin.php", {
+        const res = await fetch("/api/checkin.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
